@@ -15,6 +15,12 @@ let roundrobinindex = 0;
 
 app.use(express.json());
 
+
+app.get('/',(req,res)=>{
+  return res.send("Hello")
+})
+
+
 app.post('/ticket', (req, res) => {
   const { user_id, issue } = req.body;
 
